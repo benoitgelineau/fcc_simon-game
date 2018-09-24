@@ -1,0 +1,288 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: url('./bg/light-veneer.png') repeat;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+.showcase,
+.core {
+  background: url('./bg/binding_dark.png') repeat;
+}
+
+.showcase {
+  position: relative;
+  height: 500px;
+  width: 500px;
+  margin: 5% auto;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 10px 10px rgba(0,0,0,0.6);
+  -moz-box-shadow: 0 10px 10px rgba(0,0,0,0.6);
+  box-shadow: 0 10px 10px rgba(0,0,0,0.6);
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+/* Colored buttons */
+.red,
+.blue,
+.yellow,
+.green {
+  border-top: 3px solid rgba(255,255,255,0.2);
+  border-bottom: 3px solid rgba(0,0,0,0.5);
+  position: absolute;
+  height: 50%;
+  width: 50%;
+  -webkit-transform: scale(0.9, 0.9);
+  -moz-transform: scale(0.9, 0.9);
+  -ms-transform: scale(0.9, 0.9);
+  -o-transform: scale(0.9, 0.9);
+  transform: scale(0.9, 0.9);
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+
+.red:active,
+.blue:active,
+.yellow:active,
+.green:active {
+  -webkit-box-shadow: 0 3px 10px rgba(0,0,0,0.8);
+  -moz-box-shadow: 0 3px 10px rgba(0,0,0,0.8);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.8);
+  -webkit-transform: translate(0,2px) scale(0.9, 0.9);
+  -moz-transform: translate(0,2px) scale(0.9, 0.9);
+  -ms-transform: translate(0,2px) scale(0.9, 0.9);
+  -o-transform: translate(0,2px) scale(0.9, 0.9);
+  transform: translate(0,2px) scale(0.9, 0.9);
+}
+
+.red {
+  background-color: hsl(0, 50%, 50%); /* For IE */
+  background: radial-gradient(farthest-side at 30% 0%, hsl(0, 50%, 70%), hsl(0, 50%, 50%));
+  border-radius: 0 100% 0 0;
+  top: 1%;
+  left: 49%;
+}
+
+.red.active {
+  background-color: hsl(0, 100%, 50%);
+  background: radial-gradient(farthest-side at 30% 0%, hsl(0, 80%, 70%), hsl(0, 100%, 50%));
+}
+
+.blue {
+  background-color: hsl(200, 50%, 50%);
+  background: radial-gradient(farthest-side at 30% 100%, hsl(200, 50%, 70%), hsl(200, 50%, 50%));
+  border-radius: 0 0 100% 0;
+  top: 49%;
+  left: 49%;
+}
+
+.blue.active {
+  background-color: hsl(200, 100%, 50%);
+  background: radial-gradient(farthest-side at 30% 100%, hsl(200, 80%, 70%), hsl(200, 100%, 50%));
+}
+
+.yellow {
+  background-color: hsl(55, 50%, 50%);
+  background: radial-gradient(farthest-side at 100% 100%, hsl(55, 50%, 70%), hsl(55, 50%, 50%));
+  border-radius: 0 0 0 100%;
+  top: 49%;
+  left: 1%;
+}
+
+.yellow.active {
+  background-color: hsl(55, 100%, 50%);
+  background: radial-gradient(farthest-side at 100% 100%, hsl(55, 80%, 70%), hsl(55, 100%, 50%));
+}
+
+.green {
+  background-color: hsl(100, 50%, 50%);
+  background: radial-gradient(farthest-side at 90% 0%, hsl(100, 50%, 70%), hsl(100, 50%, 50%));
+  border-radius: 100% 0 0 0;
+  top: 1%;
+  left: 1%;
+}
+
+.green.active {
+  background-color: hsl(100, 100%, 50%);
+  background: radial-gradient(farthest-side at 90% 0%, hsl(100, 80%, 70%), hsl(100, 100%, 50%));
+}
+
+/* Center */
+.core,
+.settings {
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.core {
+  height: 250px;
+  width: 250px;
+}
+
+.settings {
+  height: 210px;
+  width: 210px;
+  background-image:
+    -webkit-radial-gradient(  50%   0%,  8% 50%, hsla(0,0%,100%,.5) 0%, hsla(0,0%,100%,0) 100%),
+    -webkit-radial-gradient(  50% 100%, 12% 50%, hsla(0,0%,100%,.6) 0%, hsla(0,0%,100%,0) 100%),
+    -webkit-radial-gradient(   0%  50%, 50%  7%, hsla(0,0%,100%,.5) 0%, hsla(0,0%,100%,0) 100%),
+    -webkit-radial-gradient( 100%  50%, 50%  5%, hsla(0,0%,100%,.5) 0%, hsla(0,0%,100%,0) 100%),
+
+    -webkit-repeating-radial-gradient( 50% 50%, 100% 100%, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   3%, hsla(0,0%,  0%,.1) 3.5%),
+    -webkit-repeating-radial-gradient( 50% 50%, 100% 100%, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%,.1) 7.5%),
+    -webkit-repeating-radial-gradient( 50% 50%, 100% 100%, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.2) 2.2%),
+
+    -webkit-radial-gradient( 50% 50%, 200% 50%, hsla(0,0%,90%,1) 5%, hsla(0,0%,85%,1) 30%, hsla(0,0%,60%,1) 100%);
+
+  -webkit-box-shadow: inset 0 3px 10px rgba(0,0,0,0.6);
+  -moz-box-shadow: inset 0 3px 10px rgba(0,0,0,0.6);
+  box-shadow: inset 0 3px 10px rgba(0,0,0,0.6);
+}
+
+.name,
+.btn,
+.screen {
+  position: absolute;
+}
+
+.name {
+  font-family: 'Cabin', Times, sans-serif;
+  font-size: 26px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  -o-transform: translate(-50%);
+  transform: translate(-50%);
+}
+
+.name span {
+  font-size: 12px;
+  vertical-align: super;
+}
+
+/* Buttons */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+  width: 60%;
+  top: 55%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -55%);
+  -moz-transform: translate(-50%, -55%);
+  -ms-transform: translate(-50%, -55%);
+  -o-transform: translate(-50%, -55%);
+  transform: translate(-50%, -55%);
+}
+
+button {
+  height: 26px;
+  width: 26px;
+  border: 2px solid transparent;
+  border-top: 2px solid rgba(255,255,255,0.4);
+  border-bottom: 2px solid rgba(0,0,0,0.2);
+  border-radius: 50%;
+  -webkit-box-shadow: 0 2.5px 0 2.5px rgba(0, 0, 0, 0.7),
+                      0 0 0 5px hsla(0,0%,60%,1),
+                      inset 0 3px 10px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0 2.5px 0 2.5px rgba(0, 0, 0, 0.7),
+                   0 0 0 5px hsla(0,0%,60%,1),
+                   inset 0 3px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 2.5px 0 2.5px rgba(0, 0, 0, 0.7),
+              0 0 0 5px hsla(0,0%,60%,1),
+              inset 0 3px 10px rgba(0,0,0,0.2);
+  cursor: pointer;
+  outline: none;
+}
+
+button:active {
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  -webkit-box-shadow: 0 1.5px 0 1.5px rgba(0, 0, 0, 0.9),
+                      0 0 0 5px hsla(0,0%,60%,1),
+                      inset 0 15px 10px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0 1.5px 0 1.5px rgba(0, 0, 0, 0.9),
+                   0 0 0 5px hsla(0,0%,60%,1),
+                   inset 0 15px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 1.5px 0 1.5px rgba(0, 0, 0, 0.9),
+              0 0 0 5px hsla(0,0%,60%,1),
+              inset 0 15px 10px rgba(0,0,0,0.2);
+}
+
+#strict {
+  background-color: hsl(55, 50%, 50%); /* for IE */
+  background: radial-gradient(closest-side at 50% 70%, hsl(55, 50%, 70%), hsl(55, 50%, 50%));
+}
+
+#strict.active {
+  background-color: hsl(55, 100%, 50%);
+  background: radial-gradient(closest-side at 50% 70%, hsl(55, 100%, 90%), hsl(55, 100%, 50%));
+}
+
+#start {
+  background-color: hsl(0, 50%, 50%);
+  background: radial-gradient(closest-side at 50% 70%, hsl(0, 50%, 60%), hsl(0, 50%, 50%));
+}
+
+#start.active {
+  background-color: hsl(0, 100%, 50%);
+  background: radial-gradient(closest-side at 50% 70%, hsl(0, 100%, 70%), hsl(0, 100%, 50%));
+}
+
+#on-off {
+  background-color: hsl(200, 50%, 50%);
+  background: radial-gradient(closest-side at 50% 70%, hsl(200, 50%, 60%), hsl(200, 50%, 50%));
+}
+
+#on-off.active {
+  background-color: hsl(200, 100%, 50%);
+  background: radial-gradient(closest-side at 50% 70%, hsl(200, 100%, 70%), hsl(200, 100%, 50%));
+}
+
+/* Display */
+.screen {
+  background-color: hsl(0, 100%, 20%);
+  border: 1px solid hsla(0,0%,40%,1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 70px;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -85%);
+  -moz-transform: translate(-50%, -85%);
+  -ms-transform: translate(-50%, -85%);
+  -o-transform: translate(-50%, -85%);
+  transform: translate(-50%, -85%);
+}
+
+#turn {
+  font-family: 'VT323', Arial, monospace;
+  font-size: 46px;
+  color: red;
+  opacity: 0.3;
+}
+
+#turn.active {
+  opacity: 1;
+}
