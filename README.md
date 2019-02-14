@@ -1,1 +1,1 @@
-# fcc_simon-game
+# Simon Game
